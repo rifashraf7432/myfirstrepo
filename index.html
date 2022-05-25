@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="multidimarray()">getresult</button>
+    <button onclick="func(val1,val2)">parameterized function</button>
+    <button onclick="func1()">Non parameterized function</button>
+</body>
+</html>
+<script>
+   var val1=parseInt(prompt("enter value1"));
+    var val2=parseInt(prompt("enter value2"));
+    function func(val1,val2) //patameterized function
+    {
+        
+           var val3=val1+val2;
+
+            document.write("sum"+val3);    
+    }
+    function func1() //non patameterized function
+    {
+        var val1=parseInt(prompt("enter value1"));
+         var val2=parseInt(prompt("enter value2"));
+           var val3=val1-val2;
+
+            document.write("sub"+val3);    
+    }
+    function multidimarray()//multi dimentional array
+    {
+        
+    var studentsdata=new Array(6);
+    studentsdata[0]=new Array("Aatika","1","WD-202203E",80,"80%");
+    studentsdata[1]=new Array("Aatika","1","WD-202203E",80,"80%");
+    studentsdata[2]=new Array("Aatika","1","WD-202203E",80,"80%");
+    studentsdata[3]=new Array("Aatika","1","WD-202203E",80,"80%");
+    studentsdata[4]=new Array("Aatika","1","WD-202203E",80,"80%");
+    studentsdata[5]=new Array("Aatika","1","WD-202203E",80,"80%");
+    
+    document.write("<table border=2>");
+        document.write("<tr><th>Name</th><th>RollNo</th><th>Batch Code</th><th>Marks</th><th>Percentage</th></tr>");
+    for(var i=0;i<=studentsdata.length;i++)
+    {
+        document.write("<tr>");
+        for(var j=0;j<studentsdata.length-1;j++)
+        {        
+          document.write("<td>"+studentsdata[i][j]+"</td>");
+         }
+        document.write("</tr>");
+    }c
+    document.write("<table>");
+}
+</script>
